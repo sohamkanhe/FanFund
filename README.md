@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# FanFund
 
-## Getting Started
+FanFund is a crowdfunding platform that connects creators with their fans, enabling community-driven support for creative projects. Whether you're an artist, musician, filmmaker, or any type of creator, FanFund helps you bring your ideas to life through direct fan contributions.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **GitHub Authentication**: Secure login using GitHub OAuth
+- **Creator Profiles**: Personalized pages for creators to showcase their work
+- **Payment Integration**: Seamless payments via Razorpay
+- **Search Functionality**: Find and support your favorite creators
+- **Community Building**: Connect creators with dedicated fans
+- **Responsive Design**: Modern UI with dark theme and Tailwind CSS
+
+## Tech Stack
+
+- **Frontend**: Next.js 15, React 19, Tailwind CSS
+- **Backend**: Next.js API Routes
+- **Database**: MongoDB with Mongoose
+- **Authentication**: NextAuth.js with GitHub provider
+- **Payments**: Razorpay integration
+- **Deployment**: Vercel-ready
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd fanfund
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Set up environment variables:
+   Create a `.env.local` file in the root directory with the following variables:
+   ```
+   MONGO_URI=your_mongodb_connection_string
+   AUTH_GITHUB_ID=your_github_client_id
+   AUTH_GITHUB_SECRET=your_github_client_secret
+   NEXTAUTH_SECRET=your_nextauth_secret
+   NEXTAUTH_URL=http://localhost:3000
+   ```
+
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Usage
+
+### For Creators
+1. Sign in with GitHub
+2. Set up your creator profile
+3. Share your profile link with fans
+4. Receive direct support and project funding
+
+### For Fans
+1. Browse and search for creators
+2. Visit creator profiles
+3. Make payments to support projects
+4. Leave messages with your contributions
+
+## Project Structure
+
+```
+fanfund/
+├── app/                    # Next.js app directory
+│   ├── api/               # API routes
+│   ├── [username]/        # Dynamic creator pages
+│   ├── dashboard/         # Creator dashboard
+│   ├── login/             # Authentication page
+│   └── payments/          # Payment management
+├── components/            # Reusable React components
+├── db/                    # Database connection
+├── models/                # Mongoose schemas
+├── public/                # Static assets
+└── actions/               # Server actions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Environment Variables
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- `MONGO_URI`: MongoDB connection string
+- `AUTH_GITHUB_ID`: GitHub OAuth client ID
+- `AUTH_GITHUB_SECRET`: GitHub OAuth client secret
+- `NEXTAUTH_SECRET`: Secret for NextAuth.js
+- `NEXTAUTH_URL`: Base URL for the application
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Contributing
 
-## Learn More
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is licensed under the MIT License.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Support
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For questions or support, please open an issue on GitHub.
