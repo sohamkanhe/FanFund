@@ -24,7 +24,7 @@ FanFund is a crowdfunding platform that connects creators with their fans, enabl
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/sohamkanhe/FanFund.git
    cd fanfund
    ```
 
